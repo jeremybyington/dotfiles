@@ -1,0 +1,35 @@
+[user]
+  name = Ekkachai Danwanichakul 
+  email = ekka21@gmail.com
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[web]
+  browser = google-chrome
+[credential]
+  helper = osxkeychain
+[push]
+  default = simple
+[merge]
+  tool = kdiff3
+[difftool]
+  prompt = false
+[alias]
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -am
+  d = diff
+  dc = diff --cached
+  log = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  st = status
+  a. = add --all
+  fa = fetch --all
+  po = push origin
+
+
