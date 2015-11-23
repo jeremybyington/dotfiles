@@ -1,5 +1,5 @@
 [user]
-  name = Ekkachai Danwanichakul 
+  name = Ekkachai Danwanichakul
   email = ekka21@gmail.com
 [core]
   editor = vim
@@ -26,10 +26,5 @@
   cam = commit -am
   d = diff
   dc = diff --cached
-  log = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  log = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commitA
   st = status
-  a. = add --all
-  fa = fetch --all
-  po = push origin
-
-
