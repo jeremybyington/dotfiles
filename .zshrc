@@ -31,6 +31,14 @@ alias szsh='source ~/.zshrc'
 alias tmuxconfig='vim ~/.tmuxinator'
 #-----SSH-----------------------------------
 
+#---Git---------------------------------------------
+alias ga.="git add ."
+alias gcm="git commit -m"
+alias gpo="git push origin"
+alias gpall="git push origin master && git push origin develop && git push origin --tags"
+alias gba="git branch -a"
+alias grv="git remove -v"
+
 # Vagrant
 alias v="vagrant"
 alias vcache="vagrant global-status --prune"
