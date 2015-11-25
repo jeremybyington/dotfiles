@@ -1,9 +1,6 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="amuse"
 
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+ZSH_THEME="amuse"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -12,12 +9,12 @@ plugins=(git brew git-flow tmux vim-interaction vagrant tmuxinator)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-# Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export EDITOR='vim'
 
-#################
-# ALIAS
-# ##############
+#---common-----------
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias desk="cd ~/desktop"
 alias doc="cd /Users/ek/Documents"
 alias download="cd /Users/ek/Downloads"
@@ -29,9 +26,9 @@ alias addhoste='sudo vi /etc/hosts'
 alias vms='cd /var/www/vms/'
 alias szsh='source ~/.zshrc'
 alias tmuxconfig='vim ~/.tmuxinator'
-#-----SSH-----------------------------------
+#-----SSH------------
 
-#---Git---------------------------------------------
+#---Git--------------
 alias ga.="git add ."
 alias gcm="git commit -m"
 alias gpo="git push origin"
@@ -39,12 +36,12 @@ alias gpall="git push origin master && git push origin develop && git push origi
 alias gba="git branch -a"
 alias grv="git remove -v"
 
-# Vagrant
+#---Vagrant----------
 alias v="vagrant"
 alias vcache="vagrant global-status --prune"
 alias vgs="vagrant global-status"
 
 #---Ansible----------
 alias a="ansible"
-alias play="ansible-playbook"
+alias ap="ansible-playbook"
 alias ag="ansible-galaxy"
