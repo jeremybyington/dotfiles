@@ -43,5 +43,5 @@ alias vgs="vagrant global-status"
 
 #---Ansible----------
 alias a="ansible"
-alias ap="ansible-playbook"
+alias play="ansible-playbook"
 alias ag="ansible-galaxy"
