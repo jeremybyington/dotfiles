@@ -23,8 +23,8 @@ imap jj <esc>
 let mapleader = ","
 let g:mapleader =","
 
-"let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1map
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 autocmd BufWritePre * :%s/\s\+$//e " Remove whitespace on save
 
 " Fast save
