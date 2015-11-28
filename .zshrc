@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
-export EDITOR='vim'
+export EDITOR='vim -f'
 
 #---common-----------
 alias zshconfig="vim ~/.zshrc"
