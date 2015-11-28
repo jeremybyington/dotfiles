@@ -3,9 +3,13 @@ colorscheme molokai
 set nocompatible
 set visualbell           " don't beep
 set noerrorbells         " don't beep
-set nonumber
+set number
 set showcmd
 set mouse=a
+
+" Ignore these files/folders
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*.,*/.DS_Store
+set wildignore+=*/vendor/**
 
 nmap <C-v> :vertical resize +10<cr>
 nmap <C-b> :NERDTreeToggle<cr>
@@ -13,9 +17,30 @@ nmap :sp :rightbelow sp<cr>
 nmap <C-z> :ZoomWin<cr>
 noremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
+imap jj <esc>
 
+" Map a leader key
 let mapleader = ","
-let g:mapleader = ","
+let g:mapleader =","
+
 "let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1map
 autocmd BufWritePre * :%s/\s\+$//e " Remove whitespace on save
+
+" Fast save
+nmap <leader>w :w!<cr>
+nmap <leader>wq :wq!<cr>
+nmap <leader>q :qa!<cr>
+
+"Git
+nmap <leader>glog :!git log --color --graph --abbrev-commit --pretty=oneline<cr>
+nmap <leader>gst :!git status<cr>
+nmap <leader>ga. :!git add .<cr>
+nmap <leader>gcm :!git commit -m '.'<cr>
+nmap <leader>gpom :!git push origin master<cr>
+nmap <leader>gpod :!git push origin develop<cr>
+nmap <leader>gfa :!git fetch --all && git fetch --tags<cr>
+
+
+"Ansible
+nmap <leader>ap :!cd provision && ansible-playbook main.yml<cr>
