@@ -37,6 +37,8 @@ nmap <leader>q :qa!<cr>
 nmap <leader>glog :!git log --color --graph --abbrev-commit --pretty=oneline<cr>
 nmap <leader>gst :!git status<cr>
 nmap <leader>ga. :!git add .<cr>
+nmap <leader>gcm :Gcommit<cr>
+nmap <leader>gco :!git checkout<cr>
 nmap <leader>gpom :!git push origin master<cr>
 nmap <leader>gpod :!git push origin develop<cr>
 nmap <leader>gfa :!git fetch --all && git fetch --tags<cr>
