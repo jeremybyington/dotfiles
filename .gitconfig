@@ -19,3 +19,5 @@
   tool = kdiff3
 [difftool]
   prompt = false
+[init]
+	templatedir = ~/.git_template

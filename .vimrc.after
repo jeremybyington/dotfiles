@@ -3,14 +3,16 @@ colorscheme molokai
 set nocompatible
 set visualbell           " don't beep
 set noerrorbells         " don't beep
-set number
+set nonumber
 set showcmd
 set cursorline
 set mouse=a
 
+let g:gitgutter_realtime = 0
+
 " Ignore these files/folders
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*.,*/.DS_Store
-set wildignore+=*/vendor/**
+set wildignore+=*/vendor/**,*/node_modules/**
 
 nmap <C-v> :vertical resize +10<cr>
 nmap <C-b> :NERDTreeToggle<cr>
@@ -35,14 +37,11 @@ nmap <leader>q :qa!<cr>
 
 "Git
 nmap <leader>glog :!git log --color --graph --abbrev-commit --pretty=oneline<cr>
-nmap <leader>gst :!git status<cr>
-nmap <leader>ga. :!git add .<cr>
+nmap <leader>gst :Gstatus<cr>
+nmap <leader>ga :!git add .<cr>
 nmap <leader>gcm :Gcommit<cr>
 nmap <leader>gco :!git checkout<cr>
-nmap <leader>gpom :!git push origin master<cr>
-nmap <leader>gpod :!git push origin develop<cr>
+nmap <leader>gpm :!git push origin master<cr>
+nmap <leader>gpd :!git push origin develop<cr>
 nmap <leader>gfa :!git fetch --all && git fetch --tags<cr>
-
-
-"Ansible
-nmap <leader>ap :!cd provision && ansible-playbook main.yml<cr>
+nmap <leader>md :!make deployqa<cr>

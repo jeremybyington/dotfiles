@@ -1,11 +1,11 @@
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="amuse"
-#ZSH_THEME="agnoster"
+#ZSH_THEME="amuse"
+ZSH_THEME="agnoster"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git brew git-flow tmux vim-interaction vagrant tmuxinator)
+plugins=(git brew git-flow vim-interaction vagrant tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -27,15 +27,24 @@ alias addhoste='sudo vi /etc/hosts'
 alias vms='cd /var/www/vms/'
 alias szsh='source ~/.zshrc'
 alias tmuxconfig='vim ~/.tmuxinator'
+alias showhosts='cat /etc/hosts | grep'
 #-----SSH------------
 
 #---Git--------------
 alias ga.="git add ."
 alias gcm="git commit -m"
+alias gcam="git commit -am"
 alias gpo="git push origin"
 alias gpall="git push origin master && git push origin develop && git push origin --tags"
 alias gba="git branch -a"
-alias grv="git remove -v"
+alias grv="git remote -v"
+alias gf="git flow"
+alias nah='git reset --hard origin/develop'
+alias nahm='git reset --hard origin/master'
+alias gfrs='git flow release start'
+alias gfrf='git flow release finish'
+alias gfhs='git flow hotfix start'
+alias gfhf='git flow hotfix finish'
 
 #---Vagrant----------
 alias v="vagrant"
@@ -46,3 +55,7 @@ alias vgs="vagrant global-status"
 alias a="ansible"
 alias play="ansible-playbook"
 alias ag="ansible-galaxy"
+
+
+#Unit testing
+alias t="vendor/bin/phpunit"
