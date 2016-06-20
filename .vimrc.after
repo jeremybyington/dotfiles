@@ -7,8 +7,9 @@ set nonumber
 set showcmd
 set cursorline
 set mouse=a
+set shell=/bin/zsh
 
-let g:gitgutter_realtime = 0
+"let g:gitgutter_realtime = 0
 
 " Ignore these files/folders
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*.,*/.DS_Store

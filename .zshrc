@@ -1,16 +1,18 @@
 ZSH=$HOME/.oh-my-zsh
+COMPOSER=$HOME/.composer/vendor/bin
 
-#ZSH_THEME="amuse"
-ZSH_THEME="agnoster"
+ZSH_THEME="amuse"
+#ZSH_THEME="agnoster"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git brew git-flow vim-interaction vagrant tmuxinator)
+plugins=(git brew git-flow vim-interaction vagrant tmuxinator composer)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:$COMPOSER"
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 export EDITOR='vim -f'
 
 #---common-----------
@@ -28,6 +30,7 @@ alias vms='cd /var/www/vms/'
 alias szsh='source ~/.zshrc'
 alias tmuxconfig='vim ~/.tmuxinator'
 alias showhosts='cat /etc/hosts | grep'
+alias dump='composer dumpautoload'
 #-----SSH------------
 
 #---Git--------------
@@ -59,3 +62,8 @@ alias ag="ansible-galaxy"
 
 #Unit testing
 alias t="vendor/bin/phpunit"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/ek/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
