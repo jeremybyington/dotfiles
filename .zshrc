@@ -1,7 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 COMPOSER=$HOME/.composer/vendor/bin
 
-ZSH_THEME="amuse"
+ZSH_THEME="kolo"
+#ZSH_THEME="amuse"
 #ZSH_THEME="agnoster"
 
 COMPLETION_WAITING_DOTS="true"
@@ -16,8 +17,10 @@ export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 export EDITOR='vim -f'
 
 #---common-----------
+alias make="make"
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias sshconfig="vim ~/.ssh/config"
 alias desk="cd ~/desktop"
 alias doc="cd /Users/ek/Documents"
 alias download="cd /Users/ek/Downloads"
@@ -42,8 +45,10 @@ alias gpall="git push origin master && git push origin develop && git push origi
 alias gba="git branch -a"
 alias grv="git remote -v"
 alias gf="git flow"
-alias nah='git reset --hard origin/develop'
-alias nahm='git reset --hard origin/master'
+alias nah='git fetch --all && git reset --hard origin/develop'
+alias nahm='git fetch --all && git reset --hard origin/master'
+alias gffs='git flow feature start'
+alias gfff='git flow feature finish'
 alias gfrs='git flow release start'
 alias gfrf='git flow release finish'
 alias gfhs='git flow hotfix start'
@@ -59,11 +64,26 @@ alias a="ansible"
 alias play="ansible-playbook"
 alias ag="ansible-galaxy"
 
+#---Unit testing-------
+alias t="phpunit"
 
-#Unit testing
-alias t="vendor/bin/phpunit"
+#---Docker--------
+alias d="docker"
+alias di="docker images"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias dn="docker inspect"
+
+#dstop() { docker stop $(docker ps -q); }
+#dkill() { docker rm $(docker ps -aq); }
+
+#alias dstop=dstop
+#alias dkill=dkill
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="/Users/ek/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+DISABLE_AUTO_TITLE=true
+
