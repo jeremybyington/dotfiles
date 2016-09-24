@@ -37,6 +37,7 @@ alias dump='composer dumpautoload'
 #-----SSH------------
 
 #---Git--------------
+alias wip="git add . && git commit -m 'wip'"
 alias ga.="git add ."
 alias gcm="git commit -m"
 alias gcam="git commit -am"
